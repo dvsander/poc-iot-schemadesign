@@ -48,7 +48,7 @@ public class App {
                 .append("FD detection times", Arrays.asList(
                         asDecimal(record.get(9)),
                         asDecimal(record.get(11))))
-                .append("FD detection agrees", Arrays.asList(
+                .append("FD detection degrees", Arrays.asList(
                         asDecimal(record.get(10)),
                         asDecimal(record.get(12))))
                 .append("LW detection degrees", asDecimal(record.get(13)))
@@ -181,33 +181,6 @@ public class App {
         return new BigDecimal(val).doubleValue();
     }
 
-    /**
-     * > db.rec2.stats()
-     * {
-     * 	"ns" : "poc-schema-iot.rec2",
-     * 	"size" : 4189405,
-     * 	"count" : 4009,
-     * 	"avgObjSize" : 1045,
-     * 	"storageSize" : 4096,
-     * 	"capped" : false,
-     *
-     * > db.rec.stats()
-     * {
-     * 	"ns" : "poc-schema-iot.rec",
-     * 	"size" : 6426427,
-     * 	"count" : 4009,
-     * 	"avgObjSize" : 1603,
-     * 	"storageSize" : 4096,
-     * 	"capped" : false,
-     *
-     * De data zou ik natuurlijk kunnen wegschrijven als een list van kolomen, maar hoe moet ik dan nadien mijn data bekijken per record??
-     *
-     * Wat is de definitie van een record? Komt 1 record overeen met 1 meting uit een toestel?
-     *
-     * Queryen op de collection waar alle csv-kolommen keys zijn in hetzelfde document is standaard. Ik maak hieronder enkele use cases
-     *
-     *
-     */
 
 }
 
