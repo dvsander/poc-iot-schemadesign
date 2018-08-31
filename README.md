@@ -171,12 +171,14 @@ Benefits of the latter:
 
 ## Comparison: arrayed and non-arrayed fields
 
-| #   | Scenario      | Default     | Arrayed     | Comment                               |
-| --- | ------------- | ----------- | ----------- | ------------------------------------- |
-| 1   | "count"       | 4009        | 4009        | nr of inserted documents              |
-| 2   | "size"        | 6.426.427 B | 4.189.405 B | -35% size on disk (count\*avgObjSize) |
-| 3   | "avgObjSize"  | 1.603 B     | 1.045 B     | -35% document size                    |
-| 4   | "storageSize" | 4096        | 4096        | Same block size reserved              |
+| #   | Scenario      | Default     | Arrayed     | Comment                                 |
+| --- | ------------- | ----------- | ----------- | --------------------------------------- |
+| 1   | "count"       | 4009        | 4009        | nr of inserted documents                |
+| 2   | "size"        | 6.426.427 B | 4.189.405 B | -35% size in memory (count\*avgObjSize) |
+| 3   | "avgObjSize"  | 1.603 B     | 1.045 B     | -35% document size                      |
+| 4   | "storageSize" | 4096        | 4096        | Same block size reserved                |
+
+More information on [mongodb docs](https://docs.mongodb.com/manual/reference/command/collStats/#collstats-output)
 
 ## Typical queries
 
